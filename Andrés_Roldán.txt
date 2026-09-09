@@ -1,0 +1,211 @@
+    1  sudo apt install sysbench
+    2  clear
+    3  sysbench cpu --cpu-max-prime=20000 run
+    4  clear
+    5  sysbench memory run
+    6  clear
+    7  sysbench --test=fileio --file-total-size=10GB --file-test-mode=seqwr run
+    8  clear
+    9  sysbench --test=fileio --file-total-size=5GB --file-test-mode=rndwr run
+   10  sysbench --test=fileio --file-test-mode=rndwr run
+   11  yes
+   12  sysbench --test=fileio --file-total-size=10GB --file-test-mode=rndwr run
+   13  clear
+   14  sysbench fileio --file-total-size=10GB cleanup
+   15  sysbench fileio --file-total-size=10GB --file-test-mode=rndwr prepare
+   16  sysbench fileio --file-total-size=10GB cleanup
+   17  clear
+   18  sysbench fileio --file-total-size=10GB --file-test-mode=rndwr run
+   19  clear
+   20  sysbench fileio --file-total-size=10GB --file-test-mode=seqwr prepare
+   21  sysbench fileio --file-total-size010GB cleanup
+   22  sysbench fileio --file-total-size=10GB cleanup
+   23  clear
+   24  sysbench fileio --file-total-size=5GB --file-test-mode=seqwr prepare
+   25  sysbench fileio --file-total-size=10GB --file-test-mode=seqwr run
+   26  clear
+   27  fdas
+   28  sysbench fileio --file-total-size=10GB cleanup
+   29  sysbench fileio --file-total-size=10GB --file-test-mode=rndwr prepare
+   30  clear
+   31  sysbench fileio --file-total-size=10GB cleanup
+   32  clear
+   33  sysbench fileio --file-total-size=5GB --file-test-mode=rndwr prepare
+   34  clear
+   35  sysbench fileio --file-total-size=5GB --file-test-mode=rndwr run
+   36  clear
+   37  sysbench fileio --file-total-size=5GB --file-test-mode=seqrd run
+   38  clear
+   39  sysbench fileio --file-total-size=5GB --file-test-mode=rndrd run
+   40  clear
+   41  sysbench fileio --file-total-size=10GB cleanup
+   42  clear
+   43  sysbench memory --memory-oper=read --memory-block-size=1M --memory-total-size=10GB run
+   44  clear
+   45  sysbench memory --memory-oper=write --memory-block-size=1M --memory-total-size=10GB run
+   46  clear
+   47  systemd-analyzed
+   48  systemd-analyze
+   49  clear
+   50  systemd-analyze
+   51  systemd-analyze critical chain
+   52  clear
+   53  systemd-analyze
+   54  systemd-analyze critical-chain
+   55  systemd-analyze
+   56  systemd-analyze critical-chain
+   57  sudo apt install openssh-server
+   58  sudo apt update
+   59  sudo apt upgrade
+   60  sudo apt install openssh-server
+   61  systemctl status ssh
+   62  systemctl start ssh
+   63  systemctl enable ssh
+   64  systemctl status ssh
+   65  systemctl start ssh
+   66  systemctl stop ssh
+   67  systemctl stop ssh.socket
+   68  systemctl status ssh.socket
+   69  systemctl status ssh
+   70  systemctl restart ssh
+   71  systemctl status ssh
+   72  systemctl disable ssh
+   73  systemctl status ssh
+   74  systemctl status ssh.socket
+   75  systemctl status ssh
+   76  clear
+   77  ls
+   78  ls -l
+   79  mkdir prueba
+   80  ls
+   81  ls -l
+   82  cd prueba
+   83  ls
+   84  cd ..
+   85  touh
+   86  touch ejemplo.txt
+   87  ls
+   88  cp ejemplo.txt /prueba
+   89  cp ejemplo.txt prueba
+   90  ls
+   91  sudo cp ejemplo.txt /prueba
+   92  ls
+   93  cp ejemplo.txt /prueba
+   94  cp ejemplo.txt prueba
+   95  ls
+   96  cd prueba
+   97  ls
+   98  rm
+   99  rm ejemplo.txt
+  100  ls
+  101  cd ..
+  102  rm systemctl status ssh.socket
+  103  mv ejemplo.txt prueba
+  104  ls
+  105  cd prueba
+  106  ls
+  107  cd ..
+  108  ls
+  109  rm 'systemctl status ssh.socket'
+  110  ls
+  111  rm prueba
+  112  rm -r prueba
+  113  ls
+  114  ls -l
+  115  mkdir -p prueba/linux/basico
+  116  ls
+  117  cd prueba
+  118  ls
+  119  cd linux
+  120  ls
+  121  cd basico
+  122  ls
+  123  cd .. ..
+  124  cd ../prueba
+  125  cd /..prueba
+  126  cd /prueba
+  127  cd prueba
+  128  cd ..
+  129  cd linux
+  130  cd basico
+  131  cd ....
+  132  cd ../prueba/linux
+  133  cd ..
+  134  uname
+  135  uname -a
+  136  uname -r
+  137  top
+  138  htop
+  139  sudo apt install htop
+  140  htop
+  141  df -h
+  142  df
+  143  du
+  144  sudo passwd
+  145  ping www.google.com
+  146  sudo passwd
+  147  ip -a
+  148  ip
+  149  ip a
+  150  sudo shutdown -h now
+  151  sudo poweroff -h now
+  152  sudo poweroff
+  153  sudo apt update
+  154  sudo apt upgrade
+  155  sudo apt update
+  156  sudo apt install htop
+  157  sudo apt upgrade
+  158  clear
+  159  ls
+  160  ls -l
+  161  clear
+  162  ls
+  163  mkdir actividad
+  164  ls
+  165  cd actividad
+  166  touch archivo.txt
+  167  ls
+  168  cp archivo.txt copia_archivo.txt
+  169  ls
+  170  mv copia_archivo.txt renombrado_archivo.txt
+  171  ls
+  172  rm renombrado_archivo.txt
+  173  ls
+  174  rm -r actividad
+  175  cd ..
+  176  ls
+  177  rm -r actividad
+  178  ls
+  179  clear
+  180  uname -a
+  181  df -h
+  182  clear
+  183  sudo adduser testuser
+  184  touch archivo.txt
+  185  ls
+  186  chmod 755 archivo.txt
+  187  ls
+  188  sudo chown testuser archivo.txt
+  189  ls
+  190  sudo userdel -r testuser
+  191  sudo deluser testuser
+  192  cut -d: -f1/etc/passwd
+  193  /etc/passwd
+  194  sudo /etc/passwd
+  195  cut -d: -f1 /etc/passwd
+  196  cat /etc/passwd
+  197  getent passwd optional-user
+  198  awk -F':' '{ pring $1}' /etc/passwd
+  199  clear
+  200  ping.google.com
+  201  ping google.com
+  202  ip
+  203  ip a
+  204  sudo systemctl status ssh
+  205  history
+  206  ls
+  207  rm archivo.txt
+  208  ls
+  209  touch Andrés_Roldán.txt
+  210  ls
+  211  history > Andrés_Roldán.txt
